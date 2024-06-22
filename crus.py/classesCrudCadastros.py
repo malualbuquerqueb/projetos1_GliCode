@@ -615,40 +615,62 @@ class Funcionalidades:
         main_remedios()
     
     def dicas_saude():
-        def carregar_dicas():
-            try:
-                with open("crus.py/dicas_saude.json") as file:
-                    dicas = json.load(file)
-            except FileNotFoundError:
-                dicas = []
-                return dicas
-        
-        def main():
-            while True:
-                print("\n=== Dicas para manter um estilo de vida saudável ===")
-                print("1. Exibir dicas")
-                print("2. Sair")
-                opcao = input("Selecione uma opção: ")
+       
+        import json
 
-                if opcao == "1":
-                    exibir_dicas()
-                elif opcao == "2":
-                    print("Saindo...")
-                    break
-                else:
-                    print("Opção inválida. Tente novamente.")
-        
+
+        def main():
+                 while True:
+                                print("\n=== Dicas para um estilo de vida saudável ===")
+                                print("1. Exibir dicas")
+                                print("2. Voltar para menu principal")
+                                opcao = input("Selecione uma opção: ")
+
+
+                                if opcao == "1":
+                                    exibir_dicas()
+
+
+                                elif opcao == "2":
+                               
+                                    break
+                                else:
+                                    print("Opção inválida. Tente novamente.")
+                       
+
+
+
+
+     
+       
         def exibir_dicas():
-            dicas = carregar_dicas()
-            if dicas:
-                print("Dicas para um estilo de vida saudável:")
-                print("==========================================")
-                for i, dica in enumerate(dicas, 1):
-                    print(f"{i}. {dica}")
-                    print("------------------------------------------")
-            else:  
-                print("Nenhuma dica encontrada.")
+            dicass = (
+                        "1. Alimentação Balanceada: Priorize alimentos ricos em \n fibras, como frutas, legumes, grãos integrais e proteínas magras. \n Evite alimentos processados, ricos em açúcar e carboidratos refinados.\n \n-------------------------------------------------------------------------"
+                        "\n2. Controle de Porções: Monitore o tamanho das porções \n para controlar a ingestão de carboidratos e calorias. Isso ajuda a manter os \n níveis de glicose no sangue estáveis.\n\n------------------------------------------------------------------------"
+                        "\n3. Refeições Regulares: Mantenha um horário regular para \n as refeições e evite pular refeições. Isso ajuda a evitar picos e quedas nos \n níveis de açúcar no sangue.\n\n-------------------------------------------------------------------------"
+                        "\n4. Monitoramento da Glicose: Meça regularmente os níveis \n de glicose no sangue para entender como os alimentos, atividades e medicamentos \n afetam seus níveis de açúcar no sangue.\n\n-------------------------------------------------------------------------"
+                        "\n5. Exercício Regular: Pratique atividades físicas regularmente,\n  como caminhada, natação ou ioga. O exercício ajuda a controlar o \n açúcar no sangue, reduzir o peso e melhorar a sensibilidade à insulina.\n\n-------------------------------------------------------------------------"
+                        "\n6. Hidratação Adequada: Beba bastante água ao longo do \n dia para ajudar na digestão, manter a hidratação e controlar o apetite.\n\n-------------------------------------------------------------------------"
+                        "\n7. Gestão do Estresse: Encontre maneiras saudáveis de \n lidar com o estresse, como meditação, ioga, hobbies ou conversando com amigos \n e familiares.\n\n-------------------------------------------------------------------------"
+                        "\n8. Sono de Qualidade: Priorize o sono adequado e \n consistente todas as noites. O sono insuficiente pode afetar negativamente \n  os níveis de açúcar no sangue e a sensibilidade à insulina.\n\n-------------------------------------------------------------------------"
+                        "\n9. Evitar o Tabagismo e o Álcool em Excesso: O tabagismo e o consumo excessivo de álcool \n podem piorar os problemas de saúde associados ao diabetes.\n  Evite-os ou limite seu uso.\n\n-------------------------------------------------------------------------"
+                        "\n10. Consulta Médica Regular: Mantenha consultas regulares \n  com seu médico e equipe de saúde para monitorar seu diabetes,\n ajustar o plano de tratamento conforme necessário e receber apoio e orientação.\n------------------------------------------------------------------------"
+                             
+ )          
+
+
+            print(dicass)
+           
+             
+           
+
+
+
+
+
+
         main()
+
     
         
     def verificacao_nivel_glicose(glicose):
